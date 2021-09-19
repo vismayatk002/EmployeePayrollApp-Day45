@@ -3,42 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 const empPayrollJSON = () =>{
-    let empPayrollList = [
-        {
-            name: 'Vismaya',
-            gender: 'Female',
-            department: [
-                'Finance'
-            ],
-            salary: '450000',
-            startDate: '15-09-2021',
-            note: '',
-            profilePic: '../assets/profile-images/Ellipse-1.png'
-        },
-        {
-            name: 'Deepak',
-            gender: 'Male',
-            department: [
-                'Finance',
-                'Sales'
-            ],
-            salary: '300000',
-            startDate: '05-09-2021',
-            note: '',
-            profilePic: '../assets/profile-images/Ellipse-3.png'
-        },
-        {
-            name: 'Praveen',
-            gender: 'Male',
-            department: [
-                'Engineer'
-            ],
-            salary: '350000',
-            startDate: '18-09-2021',
-            note: '',
-            profilePic: '../assets/profile-images/Ellipse-5.png'
-        }
-    ];
+    let empPayrollList = JSON.parse(localStorage.getItem("EmpPayrollList"));
     return empPayrollList;
 }
 
@@ -69,9 +34,9 @@ const createInnerHtml = () => {
 
         innerHtml = `${innerHtml}
             <tr>
-                <td><img class="profile" src="${empPayrollData.profilePic}">${empPayrollData.name}</td>
+                <td><img class="profile" src="${empPayrollData.profileImg}">${empPayrollData.empName}</td>
                 <td>${empPayrollData.gender}</td>
-                <td>${getDept(empPayrollData.department)}</td>
+                <td>${getDept(empPayrollData.dept)}</td>
                 <td>${empPayrollData.salary}</td>
                 <td>${empPayrollData.startDate}</td>
                 <td>

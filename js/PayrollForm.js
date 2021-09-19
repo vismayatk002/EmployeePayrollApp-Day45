@@ -98,11 +98,11 @@ function onSubmit(){
         empObj.gender = gender.value;
 
         const dept = document.querySelectorAll("input[type='checkbox']:checked");
-        let departments = '';
+        let deptList = [];
         for (let i = 0; i < dept.length; i++) {   
-            departments += dept[i].value+ ',';
+            deptList.push(dept[i].value);
         }   
-        empObj.dept = departments;
+        empObj.dept = deptList;
 
         const notes = document.querySelector('#notes');
         empObj.notes = notes.value;
