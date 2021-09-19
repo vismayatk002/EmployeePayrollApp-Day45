@@ -15,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     border: 0px solid green;
+    padding-bottom: 31px;
 }
 
 .logo-content{
@@ -22,7 +23,7 @@ body{
     flex-direction: row;
     align-items: center;
     border: 0px solid green;
-    width: 65%;
+    width: 63%;
 }    
 
 .logo-content-img{
@@ -65,10 +66,16 @@ body{
     letter-spacing: 0px;
     color: #ffffff;
     opacity: 1;
-    background: orange;
+    background: seagreen;
     border: none;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
     text-decoration: none;
+}
+
+/* UC3 */
+.table-content{
+    width: 81%;
+    padding-left: 19%;  
 }
